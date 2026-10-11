@@ -834,3 +834,285 @@ footer {
   }
 
 }
+
+
+/* Connected GitHub accounts */
+.connected-accounts {
+  margin: 18px 0;
+  padding: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.25);
+}
+
+.connected-accounts h3 {
+  margin: 0 0 14px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.connected-accounts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.connected-account {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 10px;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.connected-account:hover {
+  border-color: rgba(139, 92, 246, 0.4);
+  background: rgba(139, 92, 246, 0.04);
+}
+
+.connected-account-icon {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+}
+
+.connected-account-details {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.connected-account-details strong {
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.connected-account-details span {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.connected-account-status {
+  color: #86efac;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+/* Mobile layout */
+@media (max-width: 520px) {
+  .connected-accounts {
+    padding: 12px;
+  }
+
+  .connected-account {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .connected-account-status {
+    margin-left: 48px;
+  }
+}
+
+
+/* Professional GitHub account avatar */
+.connected-account-avatar {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #292b40, #191a29);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  color: #e2e8f0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.connected-account-avatar:hover {
+  border-color: rgba(167, 139, 250, 0.65);
+  transform: translateY(-1px);
+}
+
+.connected-account-avatar svg {
+  display: block;
+  width: 23px;
+  height: 23px;
+}
+
+/* Give each account row a cleaner appearance */
+.connected-account {
+  padding: 14px;
+  gap: 14px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.015);
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.connected-account:hover {
+  background: rgba(255, 255, 255, 0.035);
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+.connected-account-details strong {
+  color: #f1f5f9;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.1px;
+}
+
+.connected-account-details span {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+@media (max-width: 520px) {
+  .connected-account-avatar {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    border-radius: 10px;
+  }
+}
+
+
+/* GitHub account dropdown */
+
+/* GitHub account dropdown */
+#installation-select {
+  appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  box-sizing: border-box;
+  margin: 0 0 14px;
+  padding: 0 42px 0 15px;
+
+  border: 1px solid #343b50;
+  border-radius: 10px;
+  background-color: #171c2b;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+
+  color: #e2e8f0;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  z-index: 1;
+
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#installation-select:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.16);
+}
+
+#installation-select option {
+  background: #171c2b;
+  color: #e2e8f0;
+}
+
+/* Manage / add repositories button */
+.connection-card button.auth-button.secondary {
+  display: flex;
+  position: relative;
+  float: none;
+  clear: both;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  min-height: 44px;
+  margin: 0 auto;
+  padding: 10px 18px;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #3b4260;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #20263a, #191e30);
+  color: #e2e8f0;
+
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+  white-space: normal;
+  line-height: 1.5;
+
+  cursor: pointer;
+  z-index: 0;
+
+  transition: background 0.2s, border-color 0.2s,
+    color 0.2s, box-shadow 0.2s;
+}
+
+.connection-card button.auth-button.secondary:hover {
+  background: linear-gradient(135deg, #30264f, #24213b);
+  border-color: #8b5cf6;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(139, 92, 246, 0.12);
+}
+
+.connection-card button.auth-button.secondary:active {
+  transform: translateY(1px);
+}
+
+.connection-card button.auth-button.secondary:focus-visible {
+  outline: 2px solid #a78bfa;
+  outline-offset: 3px;
+}
+
+
+.connect-another-account-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 15px;
+  border: 1px solid rgba(129, 140, 248, 0.35);
+  border-radius: 10px;
+  background: rgba(99, 102, 241, 0.14);
+  color: #c7d2fe;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.connect-another-account-button:hover {
+  background: rgba(99, 102, 241, 0.25);
+  border-color: #818cf8;
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.connect-another-account-button:focus-visible {
+  outline: 2px solid #818cf8;
+  outline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .connect-another-account-button {
+    padding: 9px 12px;
+    font-size: 12px;
+  }
+}

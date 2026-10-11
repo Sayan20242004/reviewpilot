@@ -4,3 +4,5 @@ httpx
 python-dotenv
 langgraph
 groq
+PyJWT
+cryptography
